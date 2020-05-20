@@ -1,0 +1,25 @@
+= Usage instructions
+
+Install python3-zmq on both client and server
+
+[source,bash]
+----
+sudo apt install python3-zmq
+----
+
+== LED server
+
+Install neopixel library for the RPi
+
+[source,bash]
+----
+sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
+sudo python3 -m pip install --force-reinstall adafruit blinka
+----
+
+Run the neopixel server with sudo privileges (for use of the neopixel library sudo is needed, see: link:https://learn.adafruit.com/neopixels-on-raspberry-pi/python-usage[more explanation here]) from this directory with:
+
+[source,bash]
+----
+sudo ./led_server.py
+----
