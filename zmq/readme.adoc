@@ -23,3 +23,14 @@ Run the neopixel server with sudo privileges (for use of the neopixel library su
 ----
 sudo ./led_server.py
 ----
+
+== LED client
+
+run the led client from the command line by specifying the host to connect to, and the command to give the LED server. You can set the color or brightness.
+
+The server will respond with a "success" or "fail" reply
+
+[source,bash]
+----
+python led_client.py -n raspberrypi -c color_o
+----
