@@ -1,2 +1,14 @@
+# image formats and csv files
 *.png
 *.jpg
+*.csv
+
+# pytorch models unless specifically added
+*.pkl
+*.pth
+
+# notebooks unless specifically added
+*.ipynb
+
+# IDE's
+.vscode
