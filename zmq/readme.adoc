@@ -54,5 +54,14 @@ The camera server takes a picture at a clients request. It saves the image local
 
 [source,bash]
 ----
-python cameraserver.py
+./camera_server.py
+----
+
+== CAMERA client
+
+The client sends a request "pic" to the server and receives a numpy array. The numpy array is saved locally (with PIL).
+
+[source,bash]
+----
+python camera_client.py -n raspberrypi -c pic
 ----
