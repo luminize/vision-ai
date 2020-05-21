@@ -47,3 +47,12 @@ The server will respond with a "success" or "fail" reply
 ----
 python led_client.py -n raspberrypi -c color_o
 ----
+
+== CAMERA server
+
+The camera server takes a picture at a clients request. It saves the image locally, opens as numpy image (with PIL) and sends the data to the client.
+
+[source,bash]
+----
+python cameraserver.py
+----
