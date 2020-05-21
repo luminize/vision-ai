@@ -1,0 +1,9 @@
+[Unit]
+Description=LED server
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/projects/vision-ai/zmq/led_server.py
+
+[Install]
+WantedBy=multi-user.target

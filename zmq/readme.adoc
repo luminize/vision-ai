@@ -24,6 +24,19 @@ Run the neopixel server with sudo privileges (for use of the neopixel library su
 sudo ./led_server.py
 ----
 
+To have the LED server start at boot, copy the `led-server.service` file to the `/etc/systemd/system/` directory. Make sure you point to the correct path on the `ExecStart=...` line.
+the script will be started with root privileges so the neopixels will work.
+
+[source,bash]
+----
+# copy the .service file to the systemd directory
+sudo cp led-server.service /etc/systemd/system/
+# set correct permissions
+sudo chmod +x /etc/systemd/system/led-server.service
+# the --now argument will enable _and_ start the service
+systemctl enable --now led-server.service
+----
+
 == LED client
 
 run the led client from the command line by specifying the host to connect to, and the command to give the LED server. You can set the color or brightness.
